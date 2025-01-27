@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr0gxwtdj11yw"]
+
+[ext_resource type="Script" path="res://Scenes/plataforma_movil1.gd" id="1_hoxqa"]
+[ext_resource type="Texture2D" uid="uid://dlnkix1riw2pr" path="res://Assets/Art/Animation/anim_enemigos/anim_pincho_de_mar_0008.png" id="2_heu86"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_86hik"]
+radius = 20.0
+
+[sub_resource type="Animation" id="Animation_7ofbo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-513, 46)]
+}
+
+[sub_resource type="Animation" id="Animation_icpkb"]
+resource_name = "move"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(578, 19)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivu8k"]
+_data = {
+"RESET": SubResource("Animation_7ofbo"),
+"move": SubResource("Animation_icpkb")
+}
+
+[node name="plat_movil1" type="AnimatableBody2D"]
+position = Vector2(-513, 46)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_hoxqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 19)
+texture = ExtResource("2_heu86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(578, 17)
+shape = SubResource("CircleShape2D_86hik")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ivu8k")
+}

@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq0yysw54pvhm"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/SpawnBurbujas/SpawnerBurbujas.gd" id="1_qsgfq"]
+
+[node name="SpawnerBurbujas" type="Node2D"]
+script = ExtResource("1_qsgfq")
+
+[node name="SpawnBurbujas" type="Node2D" parent="."]
+
+[node name="Posicion9" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(1150, 0)
+
+[node name="Posicion8" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(1024, 0)
+
+[node name="Posicion7" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(896, 0)
+
+[node name="Posicion6" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(768, 0)
+
+[node name="Posicion4" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(512, 0)
+
+[node name="Posicion3" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(384, 0)
+
+[node name="Posicion2" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(256, 0)
+
+[node name="Posicion1" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(128, 0)
+
+[node name="Posicion5" type="Node2D" parent="SpawnBurbujas"]
+position = Vector2(640, 0)
+
+[node name="SpawnPinchos" type="Node2D" parent="."]
+
+[node name="Posicion17" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(640, 0)
+
+[node name="Posicion10" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(1150, 0)
+
+[node name="Posicion11" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(1024, 0)
+
+[node name="Posicion12" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(896, 0)
+
+[node name="Posicion13" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(768, 0)
+
+[node name="Posicion14" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(512, 0)
+
+[node name="Posicion15" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(384, 0)
+
+[node name="Posicion16" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(256, 0)
+
+[node name="Posicion18" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(128, 0)
+
+[node name="Posicion19" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(640, 0)
+
+[node name="TimerBurbujas" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="TimerPinchos" type="Timer" parent="."]
+wait_time = 0.25
+
+[connection signal="timeout" from="TimerBurbujas" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimerPinchos" to="." method="_on_timer_pinchos_timeout"]

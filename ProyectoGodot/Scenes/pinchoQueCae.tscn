@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6vgxqty7u7f2"]
+
+[ext_resource type="Texture2D" uid="uid://cp8ieh4lxe2oq" path="res://Assets/Art/Characters/enemigos/pincho_de_mar.png" id="1_lsp2u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mf0k1"]
+radius = 21.0
+
+[node name="PinchosQueCaen" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 2
+mass = 2.5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lsp2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_mf0k1")
