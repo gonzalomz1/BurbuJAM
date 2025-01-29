@@ -23,7 +23,7 @@ func reproducirVideoGameOver() -> void:
 func pausarVideoGameOver() -> void:
 	$GameOver.paused = true
 
-func handle_input(event):
+func handle_input(_event):
 	if Input.is_action_pressed("confirmar") && ($botonComenzar.visible || $botonRejugar.visible):
 		irAGameplay()
 

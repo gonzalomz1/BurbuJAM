@@ -5,6 +5,3 @@ extends AnimatableBody2D
 func _ready():
 	if fullSwing:
 		$AnimationPlayer.play("fullSwing")
-
-
-

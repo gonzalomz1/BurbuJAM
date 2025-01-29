@@ -18,7 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 ## INPUT
-func handle_input(event: InputEvent) -> void:
+func handle_input(_event: InputEvent) -> void:
 	if is_dashing:
 		return # Si dasheamos, ignoramos otros inputs
 	# Reseteamos la velocidad inicial
@@ -129,7 +129,7 @@ func habilitar() -> void:
 	show()
 	set_physics_process(true)
 
-func _on_restar_vida_body_entered(body):
+func _on_restar_vida_body_entered(_body):
 	EventManager.restarAire()
 	$AnimationPlayer.play("RecibirGolpe")
 	$RestarVida/ColisionRestarVida.disabled = true

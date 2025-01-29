@@ -13,7 +13,7 @@ func _ready():
 	pass
 	#fall()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	position.y += current_speed
 
 func _on_hitbox_area_entered(area):

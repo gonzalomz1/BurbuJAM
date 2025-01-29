@@ -6,13 +6,13 @@
 [ext_resource type="VideoStream" path="res://Assets/Art/cinematics/salida_muerte.ogv" id="4_6fgf1"]
 [ext_resource type="FontFile" uid="uid://o1ti4gqqfaba" path="res://Assets/Fonts/letra_Diabetes_burbujam.ttf" id="5_hsk6q"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5xxn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvm8h"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1jc2y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4w3y"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1jc2y"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvm8h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5xxn"]
 
 [sub_resource type="Animation" id="Animation_jd06d"]
 length = 0.001
@@ -348,13 +348,13 @@ _data = {
 "game_over": SubResource("Animation_xgwun")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g63us"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0yhi"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_riql3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1m7j"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_riql3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0yhi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g63us"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -390,10 +390,10 @@ offset_bottom = 477.0
 theme_override_colors/font_color = Color(1, 0.611765, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("5_hsk6q")
 theme_override_font_sizes/font_size = 78
-theme_override_styles/normal = SubResource("StyleBoxEmpty_b5xxn")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_xvm8h")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_y4w3y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1jc2y")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_y4w3y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xvm8h")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b5xxn")
 text = "Presiona ENTER PARA COMENZAR"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -417,10 +417,10 @@ offset_bottom = 471.0
 theme_override_colors/font_color = Color(1, 0.611765, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("5_hsk6q")
 theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxEmpty_g63us")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_u0yhi")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_r1m7j")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_riql3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_r1m7j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_u0yhi")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g63us")
 text = "Presiona enter para volver a jugar"
 
 [connection signal="pressed" from="botonComenzar" to="." method="_on_boton_comenzar_pressed"]

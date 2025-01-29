@@ -29,4 +29,3 @@ func resetearVariables() -> void:
 	aire = 100.0
 	tiempo= 0.0
 	score = 0
-

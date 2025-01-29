@@ -1,4 +1,7 @@
 extends Node
+
+signal cambiarSeccion(seccion:String)
+
 ## SCORE
 var score:int
 var tiempo_transcurrido:int
@@ -8,7 +11,6 @@ var laberinto1_llamado: bool  =false
 var laberinto2_llamado: bool = false
 var laberinto3_llamado: bool = false
 var pincho_llamado: bool = false
-
 
 ## InputManager
 enum GameState {GAMEPLAY, MENU}
@@ -44,24 +46,6 @@ func handle_input(event) -> void:
 
 func handle_mouse_input():
 	pass
-
-func get_player() -> CharacterBody2D:
-	return get_node("Jugador")
-
-func get_menu_node() -> Control:
-	return get_node("Menu") 
-
-func get_ui_node() -> CanvasLayer:
-	return get_node("UI")
-
-func get_spawner_node() -> Node2D:
-	return get_node("SpawnerBurbujas")
-
-func get_laberintos_node() -> CanvasLayer:
-	return get_node("SpawnerLaberintos")
-
-func get_background_node() -> Node2D:
-	return get_node("Background")
 
 func comenzarAnimacionMenuInicio() -> void:
 	var jugador = get_player()
@@ -104,26 +88,30 @@ func mostrarGameOver() -> void:
 	menu.animacionGameOver()
 	print("se llamo a al funcion animacionGameOver en juego")
 
-func _physics_process(delta):
-	if EventManager.tiempo >= 5.0:
+func _physics_process(_delta):
+	if EventManager.tiempo >= 5:
 		if !laberinto1_llamado:
 			laberinto1()
 			cambiarFondo(1)
+			emit_signal("cambiarSeccion", "B")
 			laberinto1_llamado = true
 	if EventManager.tiempo >= 25:
 		if !laberinto2_llamado:
 			laberinto2()
 			cambiarFondo(2)
+			emit_signal("cambiarSeccion", "C")
 			laberinto2_llamado = true
-	if EventManager.tiempo >= 50:
+	if EventManager.tiempo >= 45:
 		if !laberinto3_llamado:
 			laberinto3()
 			cambiarFondo(3)
+			emit_signal("cambiarSeccion", "D")
 			laberinto3_llamado = true
-	if EventManager.tiempo >= 70:
+	if EventManager.tiempo >= 65:
 		if !pincho_llamado:
 			pincho()
 			cambiarFondo(4)
+			emit_signal("cambiarSeccion", "E")
 			pincho_llamado = true
 
 func laberinto1():
@@ -145,3 +133,21 @@ func pincho():
 func cambiarFondo(frame:int) -> void:
 	var nodo = get_background_node()
 	nodo.cambiar_back(frame)
+
+func get_player() -> CharacterBody2D:
+	return get_node("Jugador")
+
+func get_menu_node() -> Control:
+	return get_node("Menu") 
+
+func get_ui_node() -> CanvasLayer:
+	return get_node("UI")
+
+func get_spawner_node() -> Node2D:
+	return get_node("SpawnerBurbujas")
+
+func get_laberintos_node() -> CanvasLayer:
+	return get_node("SpawnerLaberintos")
+
+func get_background_node() -> Node2D:
+	return get_node("Background")

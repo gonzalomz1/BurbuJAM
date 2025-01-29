@@ -76,4 +76,4 @@ debug_color = Color(1, 0, 0, 0.419608)
 
 [connection signal="area_entered" from="Sur/DetectorDeObstaculo" to="." method="_on_detector_de_obstaculo_area_entered"]
 [connection signal="area_exited" from="Sur/DetectorDeObstaculo" to="." method="_on_detector_de_obstaculo_area_exited"]
-[connection signal="area_entered" from="DestruyeJugador" to="." method="_on_destruye_jugador_area_entered"]
+[connection signal="body_entered" from="DestruyeJugador" to="." method="_on_destruye_jugador_body_entered"]
