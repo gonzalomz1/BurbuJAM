@@ -36,35 +36,61 @@ position = Vector2(640, 0)
 
 [node name="SpawnPinchos" type="Node2D" parent="."]
 
-[node name="Posicion17" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(640, 0)
+[node name="Posicion1" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(64, 0)
 
-[node name="Posicion10" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(1150, 0)
-
-[node name="Posicion11" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(1024, 0)
-
-[node name="Posicion12" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(896, 0)
-
-[node name="Posicion13" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(768, 0)
-
-[node name="Posicion14" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(512, 0)
-
-[node name="Posicion15" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(384, 0)
-
-[node name="Posicion16" type="Node2D" parent="SpawnPinchos"]
-position = Vector2(256, 0)
-
-[node name="Posicion18" type="Node2D" parent="SpawnPinchos"]
+[node name="Posicion2" type="Node2D" parent="SpawnPinchos"]
 position = Vector2(128, 0)
 
-[node name="Posicion19" type="Node2D" parent="SpawnPinchos"]
+[node name="Posicion3" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(192, 0)
+
+[node name="Posicion4" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(256, 0)
+
+[node name="Posicion5" type="Node2D" parent="SpawnPinchos"]
+
+[node name="Posicion6" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(320, 0)
+
+[node name="Posicion7" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(448, 0)
+
+[node name="Posicion8" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(512, 0)
+
+[node name="Posicion9" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(576, 0)
+
+[node name="Posicion10" type="Node2D" parent="SpawnPinchos"]
 position = Vector2(640, 0)
+
+[node name="Posicion11" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(704, 0)
+
+[node name="Posicion12" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(768, 0)
+
+[node name="Posicion13" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(832, 0)
+
+[node name="Posicion14" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(896, 0)
+
+[node name="Posicion15" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(960, 0)
+
+[node name="Posicion16" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(1024, 0)
+
+[node name="Posicion17" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(1086, 0)
+
+[node name="Posicion18" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(1150, 0)
+
+[node name="Posicion19" type="Node2D" parent="SpawnPinchos"]
+position = Vector2(1214, 0)
 
 [node name="TimerBurbujas" type="Timer" parent="."]
 wait_time = 2.0

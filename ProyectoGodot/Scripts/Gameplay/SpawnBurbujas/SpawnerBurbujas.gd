@@ -16,7 +16,15 @@ const ESCENA_PINCHO_QUE_CAE = "res://Scenes/pinchoQueCae.tscn"
 ]
 
 @onready var SpawnPinchos = [
-	$SpawnPinchos/Posicion17,
+	$SpawnPinchos/Posicion1,
+	$SpawnPinchos/Posicion2,
+	$SpawnPinchos/Posicion3,
+	$SpawnPinchos/Posicion4,
+	$SpawnPinchos/Posicion5,
+	$SpawnPinchos/Posicion6,
+	$SpawnPinchos/Posicion7,
+	$SpawnPinchos/Posicion8,
+	$SpawnPinchos/Posicion9,
 	$SpawnPinchos/Posicion10,
 	$SpawnPinchos/Posicion11,
 	$SpawnPinchos/Posicion12,
@@ -24,6 +32,7 @@ const ESCENA_PINCHO_QUE_CAE = "res://Scenes/pinchoQueCae.tscn"
 	$SpawnPinchos/Posicion14,
 	$SpawnPinchos/Posicion15,
 	$SpawnPinchos/Posicion16,
+	$SpawnPinchos/Posicion17,
 	$SpawnPinchos/Posicion18,
 	$SpawnPinchos/Posicion19
 ]

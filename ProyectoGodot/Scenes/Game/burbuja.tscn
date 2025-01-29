@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ce4qvjuweh7px" path="res://Assets/Art/Animation/anim_burbuja/Coloured/64x64/bubble_1-sheet.png" id="1_uskq2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cs6pb"]
-radius = 8.06226
+radius = 2.0
 
 [sub_resource type="Animation" id="Animation_qij63"]
 resource_name = "default"
@@ -21,6 +21,7 @@ radius = 16.0
 [node name="Burbuja" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 2
+mass = 0.15
 can_sleep = false
 lock_rotation = true
 script = ExtResource("1_0g35b")

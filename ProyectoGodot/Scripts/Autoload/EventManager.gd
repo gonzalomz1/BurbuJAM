@@ -5,6 +5,7 @@ extends Node
 var aire:float = 100.0
 var tiempo:float = 0.0
 var velocidad_descenso_aire:float = 1.25 # Velocidad inicial del descenso del aire
+var velocidad_scroll_descenso:int = 1
 var aire_maximo:float = 100.0
 var cronometro_activo:bool = false # inactivo por default
 var score:int = 0
@@ -29,3 +30,4 @@ func resetearVariables() -> void:
 	aire = 100.0
 	tiempo= 0.0
 	score = 0
+	velocidad_scroll_descenso = 1

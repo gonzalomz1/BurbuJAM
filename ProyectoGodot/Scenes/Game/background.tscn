@@ -9,4 +9,5 @@ script = ExtResource("1_trwec")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
 texture = ExtResource("1_ev7uo")
-hframes = 6
+hframes = 5
+frame = 4

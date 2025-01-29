@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bml35r04d13im"]
+[gd_scene load_steps=12 format=3 uid="uid://bml35r04d13im"]
 
 [ext_resource type="Script" path="res://Scenes/Game/juego.gd" id="1_2s3yi"]
 [ext_resource type="PackedScene" uid="uid://bq0ldblmm5yoi" path="res://Scenes/Prototypes/Characters/Jugador/jugador.tscn" id="1_kqs1c"]
@@ -7,10 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dq0yysw54pvhm" path="res://Scenes/Game/spawner_burbujas.tscn" id="4_3rmtl"]
 [ext_resource type="Script" path="res://Scripts/Tools/eventEmitterGameplay.gd" id="4_gc115"]
 [ext_resource type="PackedScene" uid="uid://c5kx5enpe0ye" path="res://Scenes/Game/background.tscn" id="4_lhtt1"]
-[ext_resource type="Script" path="res://Scripts/Tools/eventEmitterIncreaseSpeed.gd" id="5_3lon4"]
 [ext_resource type="PackedScene" uid="uid://dwwunfueigju7" path="res://Scenes/Game/mundo.tscn" id="6_maha4"]
 [ext_resource type="PackedScene" uid="uid://cita5dow20c4v" path="res://Scenes/MainMenu/menu_principal.tscn" id="6_o2qu6"]
-[ext_resource type="Script" path="res://Scripts/Tools/eventEmitterSfxIncreaseSpeed.gd" id="6_sh6if"]
 [ext_resource type="PackedScene" uid="uid://biqmk2p8nm3sg" path="res://Scenes/UI/ui.tscn" id="7_66jwo"]
 [ext_resource type="PackedScene" uid="uid://b6wp74ouwb47f" path="res://Scenes/Game/limites_del_juego.tscn" id="10_5a3fn"]
 
@@ -32,16 +30,6 @@ fmod_parameters/secciones = "A"
 fmod_parameters/secciones/labels = PackedStringArray("A", "B", "C", "D", "E")
 fmod_parameters/secciones/variant_type = 4
 script = ExtResource("4_gc115")
-
-[node name="increase_speed" type="FmodEventEmitter2D" parent="Sonido"]
-event_name = "event:/Music/increase_speed"
-event_guid = "{47e8dcb1-7160-4f86-b8ef-b3f224ac79de}"
-script = ExtResource("5_3lon4")
-
-[node name="sfx_increase_speed" type="FmodEventEmitter2D" parent="Sonido"]
-event_name = "event:/sfx_increase_speed"
-event_guid = "{b38e952c-226e-48ce-b9ed-ffafaa366a87}"
-script = ExtResource("6_sh6if")
 
 [node name="LimitesDelJuego" parent="." instance=ExtResource("10_5a3fn")]
 

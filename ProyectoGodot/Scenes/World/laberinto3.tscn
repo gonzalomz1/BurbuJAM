@@ -112,9 +112,7 @@ size = Vector2(25.5, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcels"]
 
-[node name="Laberinto3" type="RigidBody2D"]
-collision_layer = 64
-collision_mask = 2
+[node name="Laberinto3" type="Node2D"]
 script = ExtResource("1_j46gb")
 
 [node name="Laberinto" type="Node2D" parent="."]
