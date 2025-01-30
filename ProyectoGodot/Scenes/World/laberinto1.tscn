@@ -1,6 +1,5 @@
 [gd_scene load_steps=19 format=3 uid="uid://dsp06mr6q886n"]
 
-[ext_resource type="Script" path="res://Scripts/Gameplay/Maps/laberinto1.gd" id="1_8m1lv"]
 [ext_resource type="PackedScene" uid="uid://d25w1x5y1tf2a" path="res://Scenes/Moneda/moneda.tscn" id="2_l30w6"]
 [ext_resource type="Texture2D" uid="uid://fl3ljsqepvjp" path="res://Assets/Art/tilesets/tileset-rockas2.png" id="2_lgkgn"]
 
@@ -106,8 +105,10 @@ size = Vector2(23, 293)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_58ji7"]
 size = Vector2(23, 341)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ynvv"]
+size = Vector2(1280, 20)
+
 [node name="Laberinto1" type="Node2D"]
-script = ExtResource("1_8m1lv")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-1, -2)
@@ -227,3 +228,15 @@ position = Vector2(96, 272)
 
 [node name="Moneda14" parent="." instance=ExtResource("2_l30w6")]
 position = Vector2(1184, 272)
+
+[node name="DestructorDelLaberinto" type="Area2D" parent="."]
+position = Vector2(0, -28)
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestructorDelLaberinto"]
+position = Vector2(640, -14)
+shape = SubResource("RectangleShape2D_1ynvv")
+debug_color = Color(0.57043, 0.55591, 0, 0.42)
+
+[connection signal="area_entered" from="DestructorDelLaberinto" to="." method="_on_destructor_del_laberinto_area_entered"]

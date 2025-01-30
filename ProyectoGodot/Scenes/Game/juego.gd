@@ -99,34 +99,35 @@ func _physics_process(_delta):
 			laberinto2_llamado = false
 			laberinto3_llamado = false
 			juego_reset = false
+			EventManager.velocidad_scroll_descenso = 1.0
 	if EventManager.tiempo >= 5:
 		if !laberinto1_llamado:
 			emit_signal("cambiarSeccion", "B")
 			laberinto1()
 			cambiarFondo(1)
 			laberinto1_llamado = true
-			EventManager.velocidad_scroll_descenso = 5
+			EventManager.velocidad_scroll_descenso = 1.1
 	if EventManager.tiempo >= 25:
 		if !laberinto2_llamado:
 			emit_signal("cambiarSeccion", "C")
 			laberinto2()
 			cambiarFondo(2)
 			laberinto2_llamado = true
-			EventManager.velocidad_scroll_descenso = 10
+			EventManager.velocidad_scroll_descenso = 1.2
 	if EventManager.tiempo >= 45:
 		if !laberinto3_llamado:
 			emit_signal("cambiarSeccion", "D")
 			laberinto3()
 			cambiarFondo(3)
 			laberinto3_llamado = true
-			EventManager.velocidad_scroll_descenso = 15
+			EventManager.velocidad_scroll_descenso = 1.3
 	if EventManager.tiempo >= 65:
 		if !pincho_llamado:
 			emit_signal("cambiarSeccion", "E")
 			pincho()
 			cambiarFondo(4)
 			pincho_llamado = true
-			EventManager.velocidad_scroll_descenso = 20
+			EventManager.velocidad_scroll_descenso = 1.4
 
 func laberinto1():
 	var nodo = get_laberintos_node()

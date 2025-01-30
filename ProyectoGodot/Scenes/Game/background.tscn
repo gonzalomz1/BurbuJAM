@@ -10,4 +10,3 @@ script = ExtResource("1_trwec")
 position = Vector2(640, 360)
 texture = ExtResource("1_ev7uo")
 hframes = 5
-frame = 4

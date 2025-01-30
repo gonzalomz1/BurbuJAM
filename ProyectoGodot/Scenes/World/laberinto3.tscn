@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://by5ypf7bfhfkq"]
 
-[ext_resource type="Script" path="res://Scripts/Gameplay/Maps/laberinto1.gd" id="1_j46gb"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Obstacles/laberinto1.gd" id="1_j46gb"]
 [ext_resource type="Texture2D" uid="uid://fl3ljsqepvjp" path="res://Assets/Art/tilesets/tileset-rockas2.png" id="2_orck0"]
 [ext_resource type="PackedScene" uid="uid://c7yegve6lp5e0" path="res://Scenes/spike_ball.tscn" id="3_f13mx"]
 [ext_resource type="PackedScene" uid="uid://dk7vwgw1lfen8" path="res://spikeball2.tscn" id="4_rshdt"]

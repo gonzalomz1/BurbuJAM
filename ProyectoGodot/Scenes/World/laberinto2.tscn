@@ -1,6 +1,5 @@
-[gd_scene load_steps=24 format=3 uid="uid://dnaih644xwh0i"]
+[gd_scene load_steps=23 format=3 uid="uid://dnaih644xwh0i"]
 
-[ext_resource type="Script" path="res://Scripts/Gameplay/Maps/laberinto1.gd" id="1_p8ray"]
 [ext_resource type="Texture2D" uid="uid://fl3ljsqepvjp" path="res://Assets/Art/tilesets/tileset-rockas2.png" id="2_bwl4r"]
 [ext_resource type="PackedScene" uid="uid://c7yegve6lp5e0" path="res://Scenes/spike_ball.tscn" id="3_ngbrs"]
 [ext_resource type="PackedScene" uid="uid://d25w1x5y1tf2a" path="res://Scenes/Moneda/moneda.tscn" id="3_vstqr"]
@@ -116,7 +115,6 @@ size = Vector2(25.5, 57)
 size = Vector2(20, 37)
 
 [node name="Laberinto2" type="Node2D"]
-script = ExtResource("1_p8ray")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_b6l4u")
@@ -273,6 +271,12 @@ position = Vector2(770, 50)
 [node name="FallingSpike6" parent="." instance=ExtResource("6_fdyq0")]
 position = Vector2(818, 50)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="DestructorDeLaberinto" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestructorDeLaberinto"]
 position = Vector2(17, 45)
 shape = SubResource("RectangleShape2D_b5mpt")
+
+[connection signal="area_entered" from="DestructorDeLaberinto" to="." method="_on_destructor_de_laberinto_area_entered"]
